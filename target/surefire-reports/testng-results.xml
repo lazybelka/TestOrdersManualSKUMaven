@@ -1,0 +1,18 @@
+<testng-results>
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="206629" started-at="2012-05-31T18:43:19Z" finished-at="2012-05-31T18:46:46Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="206629" started-at="2012-05-31T18:43:19Z" finished-at="2012-05-31T18:46:46Z">
+      <class name="testOrders.tests.TestManualSku">
+        <test-method status="PASS" signature="getDriver()" name="getDriver" is-config="true" duration-ms="26167" started-at="2012-05-31T18:43:19Z" finished-at="2012-05-31T18:43:45Z">
+        </test-method>
+        <test-method status="PASS" signature="ManualEnterSkuTest()" name="ManualEnterSkuTest" duration-ms="180415" started-at="2012-05-31T18:43:45Z" finished-at="2012-05-31T18:46:46Z">
+        </test-method>
+        <test-method status="PASS" signature="closeDriver()" name="closeDriver" is-config="true" duration-ms="18" started-at="2012-05-31T18:46:46Z" finished-at="2012-05-31T18:46:46Z">
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>
