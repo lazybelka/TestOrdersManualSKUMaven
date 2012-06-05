@@ -1,5 +1,11 @@
 package testOrders.helper;
 
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.internal.ProfilesIni;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+
 import testOrders.helper.TestHelper;
 
 import framework.Framework;
@@ -30,5 +36,22 @@ public class TestHelper extends Framework{
 	public static String passwordmail = passwordmail_default;
 	public static String sendmail = sendmail_default;
 	public static String card = card_default;
+	
+	@BeforeTest
+	public void getDriver(){
+		
+		ProfilesIni allProfiles = new ProfilesIni();
+		FirefoxProfile profile = allProfiles.getProfile("ACMG");
+		
+		driver = new FirefoxDriver(profile);
+		driver.get(TestHelper.logInPage);
+	}
+	
+	@AfterTest
+	public void closeDriver() {
+		
+	        driver.close();
+		
+	}
 
 }

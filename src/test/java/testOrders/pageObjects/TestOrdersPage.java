@@ -24,6 +24,7 @@ public class TestOrdersPage extends TestHelper{
 	public TestOrdersPage takeInvoiceNumber() {
 		waitFor(By.cssSelector("a[href*='https://devtest.acmgaces.com/mattmin_zf/customercard/order/']"));
 		wait(2);
+		System.out.println("SKU was entered");
 		invoiceNumber = getText(By.cssSelector("a[href*='https://devtest.acmgaces.com/mattmin_zf/customercard/order/']"));
 		System.out.println("Invoice number is " + invoiceNumber);
 		

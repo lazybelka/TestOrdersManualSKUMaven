@@ -22,10 +22,9 @@ public class ItemDetailsPage extends TestHelper{
 	}
 
 	public ItemDetailsPage takeItemDetailsScreenShoot() {
-//		waitForElementVisible(By.id("edittitle"));
 		waitFor(By.cssSelector("div[class='title rendered']"));
-		wait(30);
 		wait(2);
+		System.out.println("SKU was entered");
 		waitFor(By.id("expandbutton"));
 		click(By.id("expandbutton"));
 		wait(2);

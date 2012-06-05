@@ -47,37 +47,6 @@ public class CustomerCardPage extends TestHelper{
 		waitFor(By.id("commentID"));
 		takeScreenShotInFolder("Order_Info-" + ItemDetailsPage.dateStr, ItemDetailsPage.folderName);
 		
-//		waitForVisible(By.className("autoshipGridTitle"));
-//		click(By.className("autoshipGridTitle"));
-//		wait(2);
-//		takeScreenShotInFolder("Auto_Ship-" + ItemDetailsPage.dateStr, ItemDetailsPage.folderName);
-//		
-//		waitForVisible(By.className("marketingInfoTitle"));
-//		click(By.className("marketingInfoTitle"));
-//		wait(2);
-//		takeScreenShotInFolder("Marketing_Info-" + ItemDetailsPage.dateStr, ItemDetailsPage.folderName);
-//		
-//		waitForVisible(By.className("orderHistoryTitle"));
-//		click(By.className("orderHistoryTitle"));
-//		wait(2);
-//		takeScreenShotInFolder("Order_History-" + ItemDetailsPage.dateStr, ItemDetailsPage.folderName);
-//		
-//		waitForVisible(By.className("customerInfoPanel"));
-//		click(By.className("customerInfoPanel"));
-//		wait(2);
-//		takeScreenShotInFolder("General_Panel-" + ItemDetailsPage.dateStr, ItemDetailsPage.folderName);
-//		
-//		waitForVisible(By.className("orderTabTitle"));
-//		click(By.className("orderTabTitle"));
-//		wait(2);
-//		waitForVisible(By.className("paymentButton"));
-//		click(By.className("paymentButton"));
-//		wait(2);
-//		takeScreenShotInFolder("Advanced_Payments-" + ItemDetailsPage.dateStr, ItemDetailsPage.folderName);
-		
-
-
-		
 		waitFor(By.id("ext-comp-1249__ext-comp-1272"));
 		click(By.id("ext-comp-1249__ext-comp-1272"));
 		wait(4);
