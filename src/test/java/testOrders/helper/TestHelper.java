@@ -13,7 +13,7 @@ import framework.Framework;
 public class TestHelper extends Framework{
 	
 	protected static final String logInPage_default = "https://devtest.acmgaces.com/access/login.php/";
-	protected static final String testOrdersPage_default = "https://devtest.acmgaces.com/mattmin_zf/testorders/";
+	protected static final String testOrdersPage_default = "https://devtest.acmgaces.com/mattmin_zf/testorders?sku=";
 	protected static final String itemsPage_default = "https://devtest.acmgaces.com/mattmin/maintain/items/index.php";
 	protected static final String customerCardPage_default = "https://devtest.acmgaces.com/mattmin_zf/customercard/order/";
 	protected static final String shipScriptPage_default = "https://devtest.acmgaces.com/busTestScripts/labelOrder.php?orderId=";

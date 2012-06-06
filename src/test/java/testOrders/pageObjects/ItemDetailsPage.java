@@ -10,6 +10,7 @@ import testOrders.helper.TestHelper;
 
 public class ItemDetailsPage extends TestHelper{
 	
+	private String SKU = new String();
 	static Date date = new Date();
 	static SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
 	public static String folderName = "screenShotsFolder-" + dateFormat.format(date);
@@ -24,6 +25,7 @@ public class ItemDetailsPage extends TestHelper{
 	public ItemDetailsPage takeItemDetailsScreenShoot() {
 		waitFor(By.cssSelector("div[class='title rendered']"));
 		wait(2);
+		SKU = getText(By.id("edititem"));
 		System.out.println("SKU was entered");
 		waitFor(By.id("expandbutton"));
 		click(By.id("expandbutton"));
@@ -34,7 +36,7 @@ public class ItemDetailsPage extends TestHelper{
 	}
 	
 	public TestOrdersPage openTestOrdersPage() {
-		open(testOrdersPage);
+		open(testOrdersPage + SKU);
 		
 		return new TestOrdersPage();
 	}

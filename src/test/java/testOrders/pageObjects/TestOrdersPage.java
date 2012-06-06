@@ -10,12 +10,10 @@ public class TestOrdersPage extends TestHelper{
 
 	public TestOrdersPage fillTestValues() {
 		waitFor(By.id("ship_firstname"));
-		fill(By.id("ship_firstname"), "test-" + ItemDetailsPage.dateStr);
-		fill(By.id("firstname"), "test-" + ItemDetailsPage.dateStr);
 		fill(By.id("patternName"), "test");
 		fill(By.id("cardNumber"),card);
 		fill(By.id("cardCCV"),"111");
-		System.out.println("Please enter SKU, wait for XML forming and than press Submit");
+		System.out.println("Please check is XML is formed and press Submit");
 		
 	return this;
 		
