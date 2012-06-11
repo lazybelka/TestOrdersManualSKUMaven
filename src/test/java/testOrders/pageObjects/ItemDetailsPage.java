@@ -13,7 +13,7 @@ public class ItemDetailsPage extends TestHelper{
 	private String SKU = new String();
 	static Date date = new Date();
 	static SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-	public static String folderName = "screenShotsFolder-" + dateFormat.format(date);
+	public static String folderName = new String();
 	
 	static SimpleDateFormat exactDateFormat = new SimpleDateFormat("HH-mm-dd-MM-yyyy");
 	static String dateStr = exactDateFormat.format(date);
@@ -30,6 +30,7 @@ public class ItemDetailsPage extends TestHelper{
 		waitFor(By.id("expandbutton"));
 		click(By.id("expandbutton"));
 		wait(2);
+		folderName = SKU + "_" + dateFormat.format(date);
 		takeScreenShotInFolder("Item_Details-" + ItemDetailsPage.dateStr, folderName);
 		
 		return this;
