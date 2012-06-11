@@ -12,30 +12,30 @@ import framework.Framework;
 
 public class TestHelper extends Framework{
 	
-	protected static final String logInPage_default = "https://devtest.acmgaces.com/access/login.php/";
-	protected static final String testOrdersPage_default = "https://devtest.acmgaces.com/mattmin_zf/testorders?sku=";
-	protected static final String itemsPage_default = "https://devtest.acmgaces.com/mattmin/maintain/items/index.php";
-	protected static final String customerCardPage_default = "https://devtest.acmgaces.com/mattmin_zf/customercard/order/";
-	protected static final String shipScriptPage_default = "https://devtest.acmgaces.com/busTestScripts/labelOrder.php?orderId=";
-	protected static final String user_default = "qauser";
-	protected static final String password_default = "mnb234jn";
-	protected static final String usermail_default = "lena@greenice.net";
-	protected static final String passwordmail_default = "29011402dr";
-	protected static final String sendmail_default = "lena@greenice.net";
-	protected static final String card_default = "4111111111111111";
-	protected static final String sku_default = "MST-BALM-25ML-30-C";
+	private final static String LogInPageDefault = "https://devtest.acmgaces.com/access/login.php/";
+	private final static String TestOrdersPageDefault = "https://devtest.acmgaces.com/mattmin_zf/testorders?sku=";
+	private final static String ItemsPageDefault = "https://devtest.acmgaces.com/mattmin/maintain/items/index.php";
+	private final static String CustomerCardPageDefault = "https://devtest.acmgaces.com/mattmin_zf/customercard/order/";
+	private final static String ShipScriptPageDefault = "https://devtest.acmgaces.com/busTestScripts/labelOrder.php?orderId=";
+	private final static String UserDefault = "qauser";
+	private final static String PasswordDefault = "mnb234jn";
+	private final static String UsermailDefault = "lena@greenice.net";
+	private final static String PasswordmailDefault = "29011402dr";
+	private final static String SendmailDefault = "lena@greenice.net";
+	private final static String CardDefault = "4111111111111111";
+	private final static String SkuDefault = "MST-BALM-25ML-30-C";
 	
-	public static String logInPage = logInPage_default;
-	public static String testOrdersPage = testOrdersPage_default;
-	public static String itemsPage = itemsPage_default;
-	public static String customerCardPage = customerCardPage_default;
-	public static String shipScriptPage = shipScriptPage_default;
-	public static String user = user_default;
-	public static String password = password_default;
-	public static String usermail = usermail_default;
-	public static String passwordmail = passwordmail_default;
-	public static String sendmail = sendmail_default;
-	public static String card = card_default;
+	public static String logInPage = LogInPageDefault;
+	public static String testOrdersPage = TestOrdersPageDefault;
+	public static String itemsPage = ItemsPageDefault;
+	public static String customerCardPage = CustomerCardPageDefault;
+	public static String shipScriptPage = ShipScriptPageDefault;
+	public static String user = UserDefault;
+	public static String password = PasswordDefault;
+	public static String usermail = UsermailDefault;
+	public static String passwordmail = PasswordmailDefault;
+	public static String sendmail = SendmailDefault;
+	public static String card = CardDefault;
 	
 	@BeforeTest
 	public void getDriver(){
