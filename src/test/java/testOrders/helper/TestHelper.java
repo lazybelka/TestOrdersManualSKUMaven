@@ -23,7 +23,8 @@ public class TestHelper extends Framework{
 	private final static String PasswordmailDefault = "29011402dr";
 	private final static String SendmailDefault = "lena@greenice.net";
 	private final static String CardDefault = "4111111111111111";
-	private final static String SkuDefault = "MST-BALM-25ML-30-C";
+	protected final static String SkuDefault = "MST-BALM-25ML-30-C";
+	private final static String OfferOutlookPageDefault = "https://devtest.acmgaces.com/mattmin_zf/offers/preview/index/itemId/";
 	
 	public static String logInPage = LogInPageDefault;
 	public static String testOrdersPage = TestOrdersPageDefault;
@@ -36,6 +37,7 @@ public class TestHelper extends Framework{
 	public static String passwordmail = PasswordmailDefault;
 	public static String sendmail = SendmailDefault;
 	public static String card = CardDefault;
+	public static String offerOutlookPage = OfferOutlookPageDefault;
 	
 	@BeforeTest
 	public void getDriver(){

@@ -10,7 +10,7 @@ import testOrders.helper.TestHelper;
 
 public class ItemDetailsPage extends TestHelper{
 	
-	private String SKU = new String();
+	public static  String SKU = new String();
 	static Date date = new Date();
 	static SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
 	public static String folderName = new String();
@@ -20,6 +20,17 @@ public class ItemDetailsPage extends TestHelper{
 	
 	public ItemDetailsPage(){
 		
+	}
+	
+	public ItemDetailsPage takeSKUAndCreateFolder() {
+		waitFor(By.cssSelector("div[class='title rendered']"));
+		wait(2);
+		SKU = getText(By.id("edititem"));
+		System.out.println("SKU was entered");
+		wait(2);
+		folderName = SKU + "_" + dateFormat.format(date);
+		
+		return this;
 	}
 
 	public ItemDetailsPage takeItemDetailsScreenShoot() {
@@ -36,12 +47,10 @@ public class ItemDetailsPage extends TestHelper{
 		return this;
 	}
 	
-	public TestOrdersPage openTestOrdersPage() {
-		open(testOrdersPage + SKU);
+	public OfferOutlookPage openOfferOutlookPage() {
+		open(offerOutlookPage + SKU);
 		
-		return new TestOrdersPage();
+		return new OfferOutlookPage();
 	}
-	
-	
 
 }

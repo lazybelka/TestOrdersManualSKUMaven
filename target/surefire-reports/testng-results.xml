@@ -1,18 +1,16 @@
 <testng-results>
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="162540" started-at="2012-06-11T10:39:45Z" finished-at="2012-06-11T10:42:27Z">
+  <suite name="Command line suite" duration-ms="169200" started-at="2012-06-26T18:20:24Z" finished-at="2012-06-26T18:23:13Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="162540" started-at="2012-06-11T10:39:45Z" finished-at="2012-06-11T10:42:27Z">
-      <class name="testOrders.helper.TestHelper">
-        <test-method status="PASS" signature="getDriver()" name="getDriver" is-config="true" duration-ms="16665" started-at="2012-06-11T10:39:45Z" finished-at="2012-06-11T10:40:01Z">
-        </test-method>
-        <test-method status="PASS" signature="closeDriver()" name="closeDriver" is-config="true" duration-ms="10" started-at="2012-06-11T10:42:27Z" finished-at="2012-06-11T10:42:27Z">
-        </test-method>
-      </class>
+    <test name="Command line test" duration-ms="169200" started-at="2012-06-26T18:20:24Z" finished-at="2012-06-26T18:23:13Z">
       <class name="testOrders.tests.TestManualSku">
-        <test-method status="PASS" signature="ManualEnterSkuTest()" name="ManualEnterSkuTest" duration-ms="145852" started-at="2012-06-11T10:40:01Z" finished-at="2012-06-11T10:42:27Z">
+        <test-method status="PASS" signature="getDriver()" name="getDriver" is-config="true" duration-ms="13978" started-at="2012-06-26T18:20:24Z" finished-at="2012-06-26T18:20:38Z">
+        </test-method>
+        <test-method status="PASS" signature="ManualEnterSkuTest()" name="ManualEnterSkuTest" duration-ms="155176" started-at="2012-06-26T18:20:38Z" finished-at="2012-06-26T18:23:13Z">
+        </test-method>
+        <test-method status="PASS" signature="closeDriver()" name="closeDriver" is-config="true" duration-ms="25" started-at="2012-06-26T18:23:13Z" finished-at="2012-06-26T18:23:13Z">
         </test-method>
       </class>
     </test>

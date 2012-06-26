@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Command line test" failures="0" tests="1" time="162.54" errors="0">
+<testsuite name="Command line test" failures="0" tests="1" time="169.2" errors="0">
   <properties/>
-  <testcase name="ManualEnterSkuTest" time="145.852" classname="testOrders.tests.TestManualSku"/>
+  <testcase name="ManualEnterSkuTest" time="155.176" classname="testOrders.tests.TestManualSku"/>
 </testsuite>

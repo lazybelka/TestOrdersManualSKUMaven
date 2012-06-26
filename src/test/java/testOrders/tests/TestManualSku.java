@@ -15,6 +15,8 @@ public class TestManualSku extends TestHelper{
 		.openItemsPage()
 		.enterSKU()
 		.takeItemDetailsScreenShoot()
+		.openOfferOutlookPage()
+		.saveOfferOutlookPage()
 		.openTestOrdersPage()
 		.fillTestValues()
 		.takeInvoiceNumber()
@@ -24,7 +26,7 @@ public class TestManualSku extends TestHelper{
 		.shipOrder()
 		.returnToCustomerCardPage()
 		.isOrderShipped()
-		.openViewPackingPage()
+		.saveViewPackingPage()
 		
 		;
 	}

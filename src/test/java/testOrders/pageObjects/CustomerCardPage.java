@@ -1,5 +1,7 @@
 package testOrders.pageObjects;
 
+import java.io.FileNotFoundException;
+
 import org.openqa.selenium.By;
 
 import testOrders.helper.TestHelper;
@@ -47,38 +49,38 @@ public class CustomerCardPage extends TestHelper{
 		waitFor(By.id("commentID"));
 		takeScreenShotInFolder("Order_Info-" + ItemDetailsPage.dateStr, ItemDetailsPage.folderName);
 		
-		waitFor(By.id("ext-comp-1249__ext-comp-1272"));
-		click(By.id("ext-comp-1249__ext-comp-1272"));
-		wait(4);
-		takeScreenShotInFolder("Auto_Ship-" + ItemDetailsPage.dateStr, ItemDetailsPage.folderName);
-		
-		waitFor(By.id("ext-comp-1249__ext-comp-1243"));
-		click(By.id("ext-comp-1249__ext-comp-1243"));
+		waitFor(By.className("orderinfo_marketing"));
+		click(By.className("orderinfo_marketing"));
 		wait(4);
 		takeScreenShotInFolder("Marketing_Info-" + ItemDetailsPage.dateStr, ItemDetailsPage.folderName);
 		
-		waitFor(By.id("ext-comp-1249__order-history"));
-		click(By.id("ext-comp-1249__order-history"));
+		waitFor(By.className("orderinfo_history"));
+		click(By.className("orderinfo_history"));
 		wait(4);
 		takeScreenShotInFolder("Order_History-" + ItemDetailsPage.dateStr, ItemDetailsPage.folderName);
 		
-		waitFor(By.id("ext-comp-1249__ext-comp-1227"));
-		click(By.id("ext-comp-1249__ext-comp-1227"));
+		waitFor(By.className("orderinfo_general"));
+		click(By.className("orderinfo_general"));
 		wait(4);
 		waitFor(By.className("paymentButton"));
 		click(By.className("paymentButton"));
 		wait(4);
 		takeScreenShotInFolder("Advanced_Payments-" + ItemDetailsPage.dateStr, ItemDetailsPage.folderName);
 		
-		waitFor(By.id("mainTabs__ext-comp-1172"));
-		click(By.id("mainTabs__ext-comp-1172"));
+		waitFor(By.className("generalinfo_generalpanel"));
+		click(By.className("generalinfo_generalpanel"));
 		wait(4);
 		takeScreenShotInFolder("General_Panel-" + ItemDetailsPage.dateStr, ItemDetailsPage.folderName);
+		
+		waitFor(By.className("orderinfo_autoship"));
+		click(By.className("orderinfo_autoship"));
+		wait(4);
+		takeScreenShotInFolder("Auto_Ship-" + ItemDetailsPage.dateStr, ItemDetailsPage.folderName);
 		
 		return this;
 	}
 
-	public ViewPackingPage openViewPackingPage() {
+	public ViewPackingPage saveViewPackingPage(){
 		wait(2);
 		if(isElementPresent(By.className("shipped"))){
 			click(By.className("shipped"));
@@ -87,6 +89,12 @@ public class CustomerCardPage extends TestHelper{
 			takeScreenShotInFolder("Order_Status-" + ItemDetailsPage.dateStr, ItemDetailsPage.folderName);
 		}
 		wait(5);
+		try {
+			fileMigration("PackingSlip.pdf", ItemDetailsPage.folderName + "/PackingSlip.pdf");
+		}
+		catch(FileNotFoundException e){
+			System.out.println("File not found!");
+		}
 		return new ViewPackingPage();
 	}
 
