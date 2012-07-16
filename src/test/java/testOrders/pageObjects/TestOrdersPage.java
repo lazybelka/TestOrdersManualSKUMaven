@@ -1,5 +1,8 @@
 package testOrders.pageObjects;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.openqa.selenium.By;
 
 import testOrders.helper.TestHelper;
@@ -28,6 +31,21 @@ public class TestOrdersPage extends TestHelper{
 		
 		return this;
 		
+	}
+	
+	public TestOrdersPage waitForInvoiceNumber(){
+		waitFor(By.cssSelector("a[href*='https://devtest.acmgaces.com/mattmin_zf/customercard/order/']"));
+		
+		return this;
+	}
+	
+	public TestOrdersPage invoiceNumberErrorProcessing() {
+		Date date = new Date();
+		SimpleDateFormat exactDateFormat = new SimpleDateFormat("HH-mm-ss-dd-MM-yyyy");
+		takeScreenShotInFolder("Error_invoice_number-" + exactDateFormat.format(date), ItemDetailsPage.folderName);
+		System.out.println("Getting invoice number error! Look at screenshot in SKU folder");
+		
+		return this;
 	}
 	
 	public CustomerCardPage openCustomerCardPage(){

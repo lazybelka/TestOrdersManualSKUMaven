@@ -1,6 +1,7 @@
 package testOrders.pageObjects;
 
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -11,11 +12,11 @@ import testOrders.helper.TestHelper;
 public class ItemDetailsPage extends TestHelper{
 	
 	public static  String SKU = new String();
-	static Date date = new Date();
-	static SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+	
 	public static String folderName = new String();
 	
-	static SimpleDateFormat exactDateFormat = new SimpleDateFormat("HH-mm-dd-MM-yyyy");
+	static Date date = new Date();
+	static SimpleDateFormat exactDateFormat = new SimpleDateFormat("HH-mm-ss-dd-MM-yyyy");
 	static String dateStr = exactDateFormat.format(date);
 	
 	public ItemDetailsPage(){
@@ -28,7 +29,9 @@ public class ItemDetailsPage extends TestHelper{
 		SKU = getText(By.id("edititem"));
 		System.out.println("SKU was entered");
 		wait(2);
-		folderName = SKU + "_" + dateFormat.format(date);
+		folderName = exactDateFormat.format(date) + "_" + SKU;
+		File createdFolder = new File(folderName);
+		createdFolder.mkdir();
 		
 		return this;
 	}
@@ -41,7 +44,7 @@ public class ItemDetailsPage extends TestHelper{
 		waitFor(By.id("expandbutton"));
 		click(By.id("expandbutton"));
 		wait(2);
-		folderName = SKU + "_" + dateFormat.format(date);
+		folderName = exactDateFormat.format(date) + SKU + "_";
 		takeScreenShotInFolder("Item_Details-" + ItemDetailsPage.dateStr, folderName);
 		
 		return this;
